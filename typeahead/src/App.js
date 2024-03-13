@@ -1,5 +1,5 @@
-import "./App.css";
-import useGetUsers from "./fetch/useGetUsers";
+import "../App.css";
+import useGetUsers from "../fetch/useGetUsers";
 import { useState, useEffect, useRef } from "react";
 
 function App() {

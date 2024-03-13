@@ -1,11 +1,11 @@
 import "./App.css";
-import { useState, useEffect, useRef } from "react";
 import useGetUsers from "./api/useGetUsers";
+import { useState, useEffect, useRef } from "react";
 
 function App() {
+  const userListRef = useRef(null);
   const [searchText, setSearchText] = useState("");
   const { users, setUsers, isLoading, error } = useGetUsers(searchText);
-  const userListRef = useRef(null);
 
   const handleClickOutside = (event) => {
     if (userListRef.current && !userListRef.current.contains(event.target)) {
